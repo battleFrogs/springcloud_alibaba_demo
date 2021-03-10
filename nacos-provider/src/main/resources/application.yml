@@ -1,0 +1,9 @@
+server:
+  port: 3005 # 服务端口
+spring:
+  application:
+    name: nacos-provider  #服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #注册到Nacos
