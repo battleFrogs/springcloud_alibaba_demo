@@ -1,0 +1,15 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: nacos-sentinel
+
+
+  cloud:
+    sentinel:
+      #取消Sentinel控制台懒加载
+      eager: true
+      transport:
+        #Sentinel 控制台地址
+        dashboard: localhost:8080
