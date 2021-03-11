@@ -1,0 +1,28 @@
+server:
+  port: 8000
+dubbo:
+  scan:
+    # 指定 Dubbo 服务实现类的扫描基准包
+    base-packages: com.gjc.dubboprovider.service
+  # Dubbo服务暴露的协议配置，其中子属性name为协议名称，port为协议端口（-1 表示自增端口，从 20880 开始）
+  protocol:
+    name: dubbo
+    port: -1
+  # Dubbo 服务注册中心配置，其中子属性address 的值 "spring-cloud://xx"，说明挂载到 Spring Cloud 注册中心
+  registry:
+    address: spring-cloud://localhost
+  # 指定dubbo的id和name
+#  application:
+#    id: dubbo-provider
+#    name: dubbo-provider
+spring:
+  application:
+    name: dubbo-spring-cloud-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  # 在 Spring Boot 2.1 以及更高的版本增加该设定，因为 Spring Boot 默认调整了 Bean 定义覆盖行为
+  main:
+    allow-bean-definition-overriding: true
+

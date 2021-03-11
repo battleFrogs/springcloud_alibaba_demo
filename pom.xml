@@ -21,6 +21,9 @@
         <module>nacos-consumer</module>
         <module>nacos-config</module>
         <module>nacos-sentinel</module>
+        <module>dubbo-api</module>
+        <module>dubbo-provider</module>
+        <module>dubbo-consumer</module>
     </modules>
 
     <dependencies>
@@ -53,6 +56,8 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 如果使用孵化版本，使用的groupId为：org.springframework.cloud-->
+            <!-- 如果使用毕业版本，使用的groupId为：com.alibaba.cloud-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
